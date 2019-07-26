@@ -73,6 +73,8 @@ public class EventDemo extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                msg.setForeground(Color.RED);
+
             }
         });
 
@@ -81,11 +83,55 @@ public class EventDemo extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                msg.setForeground(Color.GREEN);
+
             }
         });
 
         btnBlue.addActionListener(new ActionListener() {
 
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                msg.setForeground(Color.BLUE);
+
+            }
+        });
+
+        btnLogin.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
+        btnRegister.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
+        jcbBold.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
+        jcbItalic.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
+        jtfName.addActionListener(new ActionListener() {
+            
             @Override
             public void actionPerformed(ActionEvent e) {
 
