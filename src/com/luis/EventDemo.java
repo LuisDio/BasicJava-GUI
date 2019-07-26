@@ -103,6 +103,19 @@ public class EventDemo extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                if (!name.equals("") || !pass.equals("")) {
+                    char[] p = jpfPass.getPassword();
+                    String s = String.copyValueOf(p);
+
+                    if (name.equals(jtfName.getText()) && pass.equals(s)) {
+                        msg.setText("You are logged in");
+                    } else {
+                        msg.setText("Your name is not in the database");
+                    }
+                } else {
+                    msg.setText("Please register");
+                }
+
             }
         });
 
@@ -110,6 +123,13 @@ public class EventDemo extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent e) {
+
+                String s = jtfName.getText();
+                char[] p = jpfPass.getPassword();
+                String pp = String.copyValueOf(p);
+
+                name = s;
+                pass = pp;
 
             }
         });
@@ -119,6 +139,9 @@ public class EventDemo extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                Font font = getFont();
+                msg.setFont(new Font(font.getName(), Font.BOLD, font.getSize()));
+
             }
         });
 
@@ -127,13 +150,50 @@ public class EventDemo extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                Font font = getFont();
+                msg.setFont(new Font(font.getName(), Font.ITALIC, font.getSize()));
+
             }
         });
 
         jtfName.addActionListener(new ActionListener() {
-            
+
             @Override
             public void actionPerformed(ActionEvent e) {
+
+                if (!name.equals("") || !pass.equals("")) {
+                    char[] p = jpfPass.getPassword();
+                    String s = String.copyValueOf(p);
+
+                    if (name.equals(jtfName.getText()) && pass.equals(s)) {
+                        msg.setText("You are logged in");
+                    } else {
+                        msg.setText("Your name is not in the database");
+                    }
+                } else {
+                    msg.setText("Please register");
+                }
+
+            }
+        });
+
+        jpfPass.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                if (!name.equals("") || !pass.equals("")) {
+                    char[] p = jpfPass.getPassword();
+                    String s = String.copyValueOf(p);
+
+                    if (name.equals(jtfName.getText()) && pass.equals(s)) {
+                        msg.setText("You are logged in");
+                    } else {
+                        msg.setText("Your name is not in the database");
+                    }
+                } else {
+                    msg.setText("Please register");
+                }
 
             }
         });
